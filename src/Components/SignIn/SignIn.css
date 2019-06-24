@@ -1,0 +1,39 @@
+.signin-page-wrapper {
+    background-image: url('http://www.nycbicycleshop.com/img/cms/Mobile-Bike-Shops-repair-Atlanta.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 660px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.color-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .7;
+    position: absolute;
+}
+
+.container-fluid {
+    position: absolute;
+    font-weight: 600;
+    color: grey;
+}
+
+.signin-logo {
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.errorContainer {
+    margin: 5px 5px 10px 5px;
+}

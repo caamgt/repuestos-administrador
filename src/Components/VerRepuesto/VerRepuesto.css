@@ -1,0 +1,63 @@
+.verRepuestoImg {
+    width: 300px;
+    height: auto;
+}
+
+.img-modal-container {
+    display: flex;
+    justify-content: center;
+}
+
+.fullWidthImg {
+    justify-items: center;
+    width: auto;
+    height: 500px;
+}
+
+.footerImg-container {
+    display: inline-flex;
+    justify-content: space-between;
+    justify-self: auto;
+    width: 100%;
+    background: white;
+}
+
+.primera-img {
+    width: 100px;
+    height: auto;
+    border: 1px solid #E7E7E7;
+    border-radius: 5px;
+}
+
+.galeria-repuesto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.primera-img img {
+    width: 100%;
+    height: auto;
+}
+
+.detalles-container {
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+}
+
+.attr-line {
+    width: 80%;
+    border-bottom: 1px solid #e9eef4;
+    margin: 20px 0px 20px 0px;
+}
+
+.btnContainer {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}

@@ -1,0 +1,55 @@
+.editBtnSpacing {
+    margin: 0px 10px 0px 10px;
+}
+
+.repuesto-image-main-container {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+}
+
+.repuestoImgContainer {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    justify-self: center;
+    opacity: 1;
+}
+
+.hideMessage {
+    display: none;
+}
+
+.EditRepuestoImg-btn-img {
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-self: center;
+}
+
+.EditRepuestoImg-btn-img img {
+    max-height: 80px;
+    width: auto;
+    transition: .5s ease;
+    margin: 20% 20% 20% 20%;
+    opacity: 0;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.repuesto-image-main-container:hover .EditRepuestoImg-btn-img img {
+    opacity: 1;
+}
+
+.repuesto-image-main-container:hover .repuestoImgContainer {
+    opacity: 0.4;
+}

@@ -1,0 +1,58 @@
+.perfil-container {
+    color: #1face2;
+}
+
+.perfil-image-main-container {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+}
+
+.EditPerfilImg-btn-img {
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-self: center;
+}
+
+.EditPerfilImg-btn-img img {
+    max-height: 80px;
+    width: auto;
+    transition: .5s ease;
+    margin: 20% 20% 20% 20%;
+    opacity: 0;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.perfilImgContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    opacity: 1;
+}
+
+.perfilImgContainer img {
+    max-height: 200px;
+    width: auto;
+    transition: .5s ease;
+}
+
+.perfil-image-main-container:hover .EditPerfilImg-btn-img img {
+    opacity: 1;
+}
+
+.perfil-image-main-container:hover .perfilImgContainer {
+    opacity: 0.4;
+}

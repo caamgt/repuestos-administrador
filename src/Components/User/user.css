@@ -1,0 +1,15 @@
+.userImg-container {
+    display: flex;
+    justify-content: center;
+}
+
+.userImg-container img {
+    width: auto;
+    height: 200px;
+}
+
+.userEdit-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

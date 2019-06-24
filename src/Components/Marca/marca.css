@@ -1,0 +1,7 @@
+.edit-marcar-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-self: auto;
+    justify-items: self-start;
+}

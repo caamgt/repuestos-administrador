@@ -1,0 +1,25 @@
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+@media (min-width: 320px) {
+    .logo {
+        width: 100px;
+        height: auto;
+    }
+}
+
+@media (min-width: 800px) {
+    .logo {
+        width: 120px;
+        height: auto;
+    }
+}
+
+@media (min-width: 900px) {
+    .logo {
+        width: 150px;
+        height: auto;
+    }
+}

@@ -1,0 +1,15 @@
+.cardHeader {
+    background-color: #f8f9fa;
+}
+
+.actionBtn {
+    padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+    font-size: 10px;
+    /* background-color: #62c0e9; */
+}
+
+.lstRepuestosTitulo {
+    text-align: center;
+    font-size: 25px;
+    color: #4F4F4F;
+}
