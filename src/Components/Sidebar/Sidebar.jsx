@@ -3,7 +3,7 @@ import {Logo} from '../Logo/Logo';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTh, faUser, faUserPlus, faSignOutAlt, faDollyFlatbed, faUserShield, faCar, faBoxes, faPlus, faUpload, faList} from '@fortawesome/free-solid-svg-icons';
+import { faTh, faUser, faUserPlus, faSignOutAlt, faDollyFlatbed, faUserShield, faCar, faBoxes, faPlus, faUpload, faList, faTag} from '@fortawesome/free-solid-svg-icons';
 import './Sidebar.css';
 import { Col, Nav, NavDropdown, Navbar } from 'react-bootstrap';
 
@@ -52,7 +52,19 @@ export class Sidebar extends Component {
                             </div>
                             <NavDropdown.Divider />
                             <Link to='/categoria' className="nav-link"><FontAwesomeIcon icon={faBoxes}/>&nbsp;Categoria</Link>
-                            <NavDropdown.Divider />
+                            <div className='nav-item-container'>
+                                <div className='nav-item-icon '>
+                                    <FontAwesomeIcon icon={faTag}/>
+                                </div>
+                                <div className='nav-item-icon-text '>
+                                <NavDropdown className='nav-link' title="Marcas" id="collasible-nav-dropdown">
+                                    <div className='submenu-items'>
+                                    <Link to='/marca' className="dropdown-item nav-link"><FontAwesomeIcon icon={faPlus}/>&nbsp;Nueva marca</Link>
+                                    <Link to='/listadomarcas' className="dropdown-item nav-link"><FontAwesomeIcon icon={faList}/>&nbsp;Listado de marcas</Link>
+                                    </div>
+                                </NavDropdown>
+                                </div>
+                            </div>
                             <div className='nav-item-container'>
                                 <div className='nav-item-icon '>
                                     <FontAwesomeIcon icon={faCar}/>
