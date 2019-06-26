@@ -25,8 +25,7 @@ export class Chart extends Component {
                         maintainAspectRatio: true,
                         title: {
                             display: this.props.displayTitle,
-                            text: 'Total de repuestos por ' + this.props.location,
-                            fontSize: 25
+                            text: 'Total de repuestos por ' + this.props.location
                         },
                         legend: {
                             display: this.props.displayLegend,

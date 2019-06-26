@@ -18,6 +18,11 @@ body {
     padding-left: .5rem;
 }
 
+.nav-item-container .navbar-nav .nav-link {
+    padding-right: 0rem;
+    padding-left: 0rem;
+}
+
 .nav-item-icon {
     color: #7c7c7d;
     padding-top: 1rem;
@@ -27,13 +32,13 @@ body {
     padding-left: .3rem;
 }
 
-.navbar-expand .navbar-nav .nav-item-icon-text .nav-link {
-    padding-left: 0rem;
-}
-
 .submenu-items {
     padding-right: 1rem;
     padding-left: 1rem;
+}
+
+.nav-item-container .nav-item-icon-text .nav-item .nav-link{
+    padding-left: 0rem;
 }
 
 #sidebar-wrapper {
@@ -75,20 +80,65 @@ body {
     }
 }
 
+@media (min-width: 576px) {
+
+}
 @media (min-width: 768px) {
     #sidebar-wrapper {
         margin-left: 0;
     }
+    .aside-menu-container {
+        background-color: #f8f9fa;
+        height: 100vh;
+    }
+    
     #page-content-wrapper {
         min-width: 0;
         width: 100%;
+        padding-top: 30px;
     }
+    .separador {
+        border-bottom: 1px solid grey;
+        border-bottom-color: rgb(227, 227, 227);
+        margin: 5px 0px 20px 0px;
+    }
+
     #wrapper.toggled #sidebar-wrapper {
         margin-left: -15rem;
     }
+    .nav-container {
+        font-size: .7rem;
+    }
+    .nav-item-container {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-right: .5rem;
+        padding-left: none;
+    }
+    .nav-item-container .nav-link.espacio {
+        padding-left: 0rem;
+    }
+    .nav-item-container .nav-item-icon-text .nav-item .nav-link{
+        padding-left: 0rem;
+    }
+    
+}
+@media (min-width: 800px) {
+    .nav-container {
+        font-size: .8rem;
+    }
 }
 
-@media (min-width: 1280) {
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1024px) {
+    .nav-container {
+        font-size: .9rem;
+    }
+}
+
+@media (min-width: 1200px) {
     .menu-mobil {
         display: flex;
         justify-content: center;
@@ -98,5 +148,16 @@ body {
     .aside-menu-container {
         background-color: #f8f9fa;
         height: 100vh;
+    }
+    .nav-container {
+        font-size: 1rem;
+    }
+}
+@media (min-width: 1280px) {
+}
+
+@media (min-width: 1920px) {
+    .nav-container {
+        font-size: 1rem;
     }
 }

@@ -5,7 +5,7 @@ import { Col } from "react-bootstrap";
 export class Home extends Component {
   render() {
     return (
-        <Col xs={12} sm={12} md={8} lg={9} xl={10}  className='animated fadeIn'>
+        <Col xs={12} sm={12} md={9} lg={9} xl={10}  className='animated fadeIn'>
             <MainContainer />
         </Col>
     );

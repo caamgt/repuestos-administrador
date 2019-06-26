@@ -117,10 +117,11 @@ export class MainContainer extends Component {
   render() {
     const {chartData, totalPorCategoria} = this.state;
     return (
-        <div className="page-content-wrapper">
+        <div id="page-content-wrapper">
             <h3>Resumen de inventario</h3>
+            <div className='separador'></div>
             <Row>
-              <Col xs={12} sm={12} md={6} lg={6} xl={6}>
+              <Col xs={12} sm={12} md={12} lg={6} xl={6}>
                 <Card>
                   <Card.Body>
                     {
@@ -130,21 +131,13 @@ export class MainContainer extends Component {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col xs={12} sm={12} md={6} lg={6} xl={6}>
+              <Col xs={12} sm={12} md={12} lg={6} xl={6}>
                 <Card>
                   <Card.Body>
                     {
                       Object.keys(totalPorCategoria).length &&
                     <PieChart chartData={totalPorCategoria} legendPosition='bottom' location='categoría'/>
                     }
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col xs={12} sm={12} md={6} lg={6} xl={6}>
-                <Card style={{ width: '16rem' }}>
-                  <Card.Header>RESUMEN DE INVENTARIO</Card.Header>
-                  <Card.Body>
-                    <Card.Title>Total en inventario | <strong>125</strong></Card.Title>
                   </Card.Body>
                 </Card>
               </Col>

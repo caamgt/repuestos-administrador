@@ -158,7 +158,7 @@ export class ListadoRepuestos extends Component {
         ]
         return(
             
-            <Col lg={10}>
+            <Col xs={12} sm={12} md={8} lg={9} xl={10} >
                 <Card>
                     <Card.Header className='cardHeader'>
                         <Card.Title className="lstRepuestosTitulo">Listado de repuestos</Card.Title>

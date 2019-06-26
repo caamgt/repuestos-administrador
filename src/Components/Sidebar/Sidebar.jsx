@@ -20,7 +20,7 @@ export class Sidebar extends Component {
     render() {
         const {onRouteChange, user} = this.props;
         return (
-                <Col xs={12} sm={12} md={4} lg={3} xl={2} className='aside-menu-container'>
+                <Col xs={12} sm={12} md={3} lg={3} xl={2} className='aside-menu-container'>
 
                     <Navbar collapseOnSelect expand="md" defaultactivekey="/home" className="flex-column" bg="light">
                         <div className='menu-mobil'>
@@ -41,7 +41,7 @@ export class Sidebar extends Component {
                                     <FontAwesomeIcon icon={faDollyFlatbed}/>
                                 </div>
                                 <div className='nav-item-icon-text '>
-                                <NavDropdown className='nav-link' title="Repuestos" id="collasible-nav-dropdown">
+                                <NavDropdown className='nav-link espacio' title="Repuestos" id="collasible-nav-dropdown">
                                     <div className='submenu-items'>
                                     <Link to='/repuesto' className="dropdown-item nav-link"><FontAwesomeIcon icon={faPlus}/>&nbsp;Nuevo repuesto</Link>
                                     <Link to='/uploadrepuesto' className="dropdown-item nav-link"><FontAwesomeIcon icon={faUpload}/>&nbsp;Carga de repuestos</Link>
@@ -57,7 +57,7 @@ export class Sidebar extends Component {
                                     <FontAwesomeIcon icon={faTag}/>
                                 </div>
                                 <div className='nav-item-icon-text '>
-                                <NavDropdown className='nav-link' title="Marcas" id="collasible-nav-dropdown">
+                                <NavDropdown className='nav-link espacio' title="Marcas" id="collasible-nav-dropdown">
                                     <div className='submenu-items'>
                                     <Link to='/marca' className="dropdown-item nav-link"><FontAwesomeIcon icon={faPlus}/>&nbsp;Nueva marca</Link>
                                     <Link to='/listadomarcas' className="dropdown-item nav-link"><FontAwesomeIcon icon={faList}/>&nbsp;Listado de marcas</Link>
@@ -70,7 +70,7 @@ export class Sidebar extends Component {
                                     <FontAwesomeIcon icon={faCar}/>
                                 </div>
                                 <div className='nav-item-icon-text '>
-                                    <NavDropdown title="Tipos" className='nav-link' id="basic-nav-dropdown">
+                                    <NavDropdown title="Tipos" className='nav-link espacio' id="basic-nav-dropdown">
                                         <div className='submenu-items'>
                                             <Link to='/tipo' className="dropdown-item nav-link"><FontAwesomeIcon icon={faPlus}/>&nbsp;Nuevo tipo</Link>
                                             <Link to='/listadotipos' className="dropdown-item nav-link"><FontAwesomeIcon icon={faList}/>&nbsp;Listado Tipos</Link>
@@ -84,7 +84,7 @@ export class Sidebar extends Component {
                                     <FontAwesomeIcon icon={faUserShield}/>
                                 </div>
                                 <div className='nav-item-icon-text '>
-                                    <NavDropdown title="Seguridad" className='nav-link' id="basic-nav-dropdown">
+                                    <NavDropdown title="Seguridad" className='nav-link espacio' id="basic-nav-dropdown">
                                         <div className='submenu-items'>
                                             <Link to='/newuser' className="dropdown-item nav-link"><FontAwesomeIcon icon={faUserPlus}/>&nbsp;Nuevo Usuario</Link>
                                             <Link to='/listadousuarios' className="dropdown-item nav-link"><FontAwesomeIcon icon={faList}/>&nbsp;Listado Usuarios</Link>

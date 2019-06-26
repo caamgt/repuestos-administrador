@@ -35,7 +35,6 @@ export class UploadRepuesto extends Component {
     }
 
     render() {
-        console.log(this.state.file);
         return(
             <Col md={{ span: 4, offset: 3 }} className='pt-5 animated fadeIn'>
                 <Card>
