@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../Sidebar/Sidebar.css";
+import "./MainContainer.css";
 import {Chart} from '../Charts/Chart';
 import { Row, Col, Card } from "react-bootstrap";
 import { PieChart } from "../PieChart/PieChart";
@@ -121,8 +122,8 @@ export class MainContainer extends Component {
             <h3>Resumen de inventario</h3>
             <div className='separador'></div>
             <Row>
-              <Col xs={12} sm={12} md={12} lg={6} xl={6}>
-                <Card>
+              <Col className='card-padding cards-counteiner' xs={12} sm={12} md={12} lg={6} xl={6}>
+                <Card className='tarjeta'>
                   <Card.Body>
                     {
                       Object.keys(chartData).length &&
@@ -131,8 +132,8 @@ export class MainContainer extends Component {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col xs={12} sm={12} md={12} lg={6} xl={6}>
-                <Card>
+              <Col className='cards-counteiner' xs={12} sm={12} md={12} lg={6} xl={6}>
+                <Card className='tarjeta'>
                   <Card.Body>
                     {
                       Object.keys(totalPorCategoria).length &&

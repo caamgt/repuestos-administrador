@@ -19,9 +19,12 @@ export class ListadoRepuestos extends Component {
             hasta: '',
             porPagina: '',
             totalRepuestos: '',
-            value: true
+            value: true,
+            loading: false,
+            mostrar: ''
         }
     }
+    
 
     handleClose = () => {
         return this.setState({ show: false });
@@ -52,6 +55,13 @@ export class ListadoRepuestos extends Component {
     }
 
     componentDidMount() {
+        const ancho = window.innerWidth
+        if (ancho <= 414) {
+            this.setState({mostrar: false});
+        } else {
+            this.setState({mostrar: true});
+        }
+        this.setState({loading:true});
         const token = window.sessionStorage.getItem('token');
         fetch(`http://localhost:3001/products?desde=${this.state.desde}&limite=100`, {
             method: 'get',
@@ -65,7 +75,8 @@ export class ListadoRepuestos extends Component {
                 return this.setState({
                     repuestosList: data.products,
                     totalRepuestos: data.totalProducts,
-                    porPagina: data.products.length
+                    porPagina: data.products.length,
+                    loading: false
                 });
             }
         })
@@ -93,17 +104,26 @@ export class ListadoRepuestos extends Component {
         const columns = [
             {
                 Header: 'Nombre',
-                accessor: 'nombre'
+                accessor: 'nombre',
+                resizable: true
             },
             {
                 id: 'marca',
                 Header: 'Marca',
-                accessor: d => d.marca.nombre
+                accessor: d => d.marca.nombre,
+                resizable: true,
+                show: this.state.mostrar,
+                maxWidth: 200,
+                minWidth: 60
             },
             {
                 id: 'categoria',
                 Header: 'Categoria',
-                accessor: d => d.categoria.nombre 
+                accessor: d => d.categoria.nombre,
+                resizable: true,
+                maxWidth: 150,
+                minWidth: 50,
+                show: this.state.mostrar
             },
             {
                 Header: 'Cantidad',
@@ -111,9 +131,10 @@ export class ListadoRepuestos extends Component {
                 style: {
                     textAlign: 'center'
                 },
-                width: 100,
                 maxWidth: 100,
-                minWidth: 100
+                minWidth: 50,
+                resizable: true,
+                show: this.state.mostrar
             },
             {
                 Header: 'Precio',
@@ -121,9 +142,10 @@ export class ListadoRepuestos extends Component {
                 style: {
                     textAlign: 'center'
                 },
-                width: 100,
                 maxWidth: 100,
-                minWidth: 100
+                minWidth: 50,
+                resizable: true,
+                show: this.state.mostrar
             },
             {
                 Header: 'Acciones',
@@ -153,7 +175,10 @@ export class ListadoRepuestos extends Component {
                     )
                 },
                 sortable: false,
-                filterable: false
+                filterable: false,
+                resizable: true,
+                maxWidth: 180,
+                minWidth: 100
             }
         ]
         return(
@@ -169,6 +194,8 @@ export class ListadoRepuestos extends Component {
                     : <ReactTable
                         columns={columns}
                         data={repuestosList}
+                        className="-striped -highlight"
+                        loading={this.state.loading}
                         resolveData={data => data.map(row => row)}
                         filterable
                         defaultPageSize={10}

@@ -13,3 +13,11 @@
     font-size: 25px;
     color: #4F4F4F;
 }
+
+@media (min-width: 667px) and (max-width: 834px){
+    .actionBtn {
+        padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+        font-size: 10px;
+        /* background-color: #62c0e9; */
+    }
+}

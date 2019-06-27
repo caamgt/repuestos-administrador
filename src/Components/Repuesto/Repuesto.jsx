@@ -88,7 +88,7 @@ export class Repuesto extends Component {
 
     render() {
         return(
-            <Col xs={{ span: 10, offset: 1 }}  sm={{ span: 10, offset: 1 }}  md={{ span: 8, offset: 0 }} lg={{ span: 8, offset: 0 }}  xl={{ span: 7, offset: 1 }} className='pt-5 animated fadeIn'>
+            <Col xs={{ span: 10, offset: 1 }}  sm={{ span: 10, offset: 1 }}  md={{ span: 8, offset: 0 }} lg={{ span: 8, offset: 0 }}  xl={{ span: 7, offset: 1 }} className='pt-3 animated fadeIn'>
                 <Card>
                     <Card.Body>
                         <Card.Title className='text-center'>Nuevo Producto</Card.Title>

@@ -36,7 +36,7 @@ export class UploadRepuesto extends Component {
 
     render() {
         return(
-            <Col md={{ span: 4, offset: 3 }} className='pt-5 animated fadeIn'>
+            <Col xs={12}  sm={12}  md={9} lg={{ span: 8, offset: 0 }}  xl={{ span: 7, offset: 1 }} className='pt-5 animated fadeIn'>
                 <Card>
                     <Card.Body>
                         <Card.Title className='text-center'>Carga masiva de datos</Card.Title>
