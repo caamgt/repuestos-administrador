@@ -34,7 +34,7 @@ export class NewUser extends Component {
     
     render() {
         return(
-            <Col style={{ width: '15rem' }} md={{ span: 4, offset: 3 }} className='pt-5 animated fadeIn'>
+            <Col xs={12} sm={12} md={{ span: 6, offset: 1 }} lg={{ span: 5, offset: 2 }} xl={{ span: 4, offset: 3 }} className='pt-5 animated fadeIn'>
             <Card >
                 <Card.Body>
                     <Card.Title className='text-center'>Registrar un nuevo usuario</Card.Title>

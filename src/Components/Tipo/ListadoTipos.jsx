@@ -83,20 +83,23 @@ export class ListadoTipos extends Component {
         const columns = [
             {
                 Header: 'Nombre',
-                accessor: 'descripcion'
+                accessor: 'descripcion',
+                resizable: true,
+                minWidth: 50
             },
             {
                 Header: 'Descripción',
-                accessor: 'nota'
+                accessor: 'nota',
+                resizable: true,
+                minWidth: 50
             },
             {
                 Header: 'Acciones',
                 style: {
                     textAlign: 'center'
                 },
-                width: 200,
-                maxWidth: 200,
-                minWidth: 200,
+                resizable: true,
+                minWidth: 50,
                 Cell: props => {
                     return (
                         <div>
@@ -120,7 +123,7 @@ export class ListadoTipos extends Component {
             }
         ]
         return(
-            <Col lg={10}>
+            <Col xs={12} sm={12} md={9} lg={9} xl={10}>
             <Card>
                 <Card.Header className='cardHeader'>
                     <Card.Title className="lstRepuestosTitulo">Listado de tipos</Card.Title>

@@ -70,7 +70,7 @@ export class EditarMarca extends Component {
     render() {
         const {tipoId, tipo, marca} = this.state;
         return(
-            <Col md={{ span: 4, offset: 3 }} className='pt-5 animated fadeIn'>
+            <Col xs={12} sm={12} md={{ span: 6, offset: 1 }} lg={{ span: 6, offset: 1 }} xl={{ span: 4, offset: 3 }} className='pt-5 animated fadeIn'>
                 <Card>
                     <Card.Body>
                         <Card.Title className='text-center'>Editar marca</Card.Title>

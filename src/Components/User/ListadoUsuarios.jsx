@@ -19,7 +19,8 @@ export class ListadoUsuarios extends Component {
             hasta: '',
             porPagina: '',
             totalRepuestos: '',
-            value: true
+            value: true,
+            mostrar: ''
         }
     }
 
@@ -52,6 +53,12 @@ export class ListadoUsuarios extends Component {
     }
 
     componentDidMount() {
+        const ancho = window.innerWidth
+        if (ancho <= 414) {
+            this.setState({mostrar: false});
+        } else {
+            this.setState({mostrar: true});
+        }
         const token = window.sessionStorage.getItem('token');
         fetch(`http://localhost:3001/users?desde=0&limite=100`, {
             method: 'get',
@@ -91,15 +98,23 @@ export class ListadoUsuarios extends Component {
         const columns = [
             {
                 Header: 'Nombre',
-                accessor: 'nombre'
+                accessor: 'nombre',
+                resizable: true,
+                minWidth: 50
             },
             {
                 Header: 'Apellido',
-                accessor: 'apellido'
+                accessor: 'apellido',
+                resizable: true,
+                minWidth: 50,
+                show: this.state.mostrar
             },
             {
                 Header: 'Email',
-                accessor: 'email'
+                accessor: 'email',
+                resizable: true,
+                minWidth: 50,
+                show: this.state.mostrar
             },
             {
                 Header: 'Acciones',
@@ -129,11 +144,13 @@ export class ListadoUsuarios extends Component {
                     )
                 },
                 sortable: false,
-                filterable: false
+                filterable: false,
+                resizable: true,
+                minWidth: 50
             }
         ]
         return(
-            <Col lg={10}>
+            <Col xs={12} sm={12} md={9} lg={9} xl={10}>
                 <Card>
                     <Card.Header className='cardHeader'>
                         <Card.Title className="lstRepuestosTitulo">Listado de usuarios</Card.Title>

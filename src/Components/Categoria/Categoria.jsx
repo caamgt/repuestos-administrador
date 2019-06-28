@@ -37,7 +37,7 @@ export class Categoria extends Component {
 
     render() {
         return(
-            <Col md={{ span: 4, offset: 3 }} className='pt-5 animated fadeIn'>
+            <Col xs={12} sm={12} md={8} lg={{ span: 5, offset: 2 }} xl={{ span: 5, offset: 2 }} className='pt-5 animated fadeIn'>
                 <Card>
                     <Card.Body>
                         <Card.Title className='text-center'>Nueva Categoria</Card.Title>

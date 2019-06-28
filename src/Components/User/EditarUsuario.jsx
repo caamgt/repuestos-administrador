@@ -82,8 +82,8 @@ export class EditarUsuario extends Component {
     render() {
         const {nombre, apellido, email, userImgUrl} = this.state;
         return(
-            <Col md={{ span: 4, offset: 3 }} className='pt-5 animated fadeIn'>
-                <Card style={{ width: '19rem' }} className='perfil-container'>
+            <Col xs={12} sm={12} md={{ span: 5, offset: 1 }} lg={{ span: 5, offset: 2 }} xl={{ span: 4, offset: 3 }} className='pt-2 animated fadeIn'>
+                <Card className='perfil-container'>
                     <div className='userImg-container'>
                         <Card.Img variant="top" src={userImgUrl} alt='perfil'/>
                     </div>

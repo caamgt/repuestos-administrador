@@ -96,8 +96,8 @@ export class Perfil extends Component {
         const {userImgUrl} = this.state;
         const {nombre, email, apellido} = this.props.user;
         return(
-            <div>
-                <Card style={{ width: '19rem' }} className='perfil-container'>
+            <div xs={12} sm={12} md={{ span: 5, offset: 1 }} lg={{ span: 5, offset: 2 }} xl={{ span: 4, offset: 3 }} className='pt-2 animated fadeIn'>
+                <Card className='perfil-container'>
                     <div className='perfil-image-main-container'>
                         <div className='perfilImgContainer'>
                             <Card.Img src={userImgUrl} alt='perfil'/>

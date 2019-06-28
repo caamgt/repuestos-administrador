@@ -83,21 +83,24 @@ export class ListadoMarcas extends Component {
         const columns = [
             {
                 Header: 'Nombre',
-                accessor: 'nombre'
+                accessor: 'nombre',
+                minWidth: 50,
+                resizable: true,
             },
             {
                 id: 'tipo',
                 Header: 'Tipo',
-                accessor: d => d.tipo.descripcion
+                accessor: d => d.tipo.descripcion,
+                minWidth: 50,
+                resizable: true
             },
             {
                 Header: 'Acciones',
                 style: {
                     textAlign: 'center'
                 },
-                width: 200,
-                maxWidth: 200,
-                minWidth: 200,
+                minWidth: 50,
+                resizable: true,
                 Cell: props => {
                     return (
                         <div>
