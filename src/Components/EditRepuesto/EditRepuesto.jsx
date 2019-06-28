@@ -147,7 +147,7 @@ export class EditRepuesto extends Component {
     render() {
         const {idMarca, idCategoria, nombre, dimensiones, nota, cantidad, precio, marca, categoria, marcas, categorias} = this.state;
         return(
-            <Col xs={12} sm={12} md={8} lg={9} xl={10} className='pt-2 animated fadeIn'>
+            <Col xs={12} sm={12} md={8} lg={9} xl={{ span: 7, offset: 1 }} className='pt-3 animated fadeIn'>
             <Card>
                 <Card.Body>
                     <Card.Title className='text-center'>Editar Repuesto</Card.Title>
