@@ -119,7 +119,7 @@ export class MainContainer extends Component {
     const {chartData, totalPorCategoria} = this.state;
     return (
         <div id="page-content-wrapper">
-            <h3>Total de inventario</h3>
+            <h3>Resumen de inventario</h3>
             <div className='separador'></div>
             <Row>
               <Col className='card-padding cards-counteiner' xs={12} sm={12} md={12} lg={6} xl={6}>
