@@ -10,7 +10,7 @@ export const ButtonBackToRepuestos = () => {
             className="button is-info"
             to='/listadorepuestos'
         >
-            <Button variant="secondary" type='submit'>
+            <Button variant="secondary" type='submit' block>
                 <FontAwesomeIcon icon={faArrowCircleLeft}/>&nbsp;Regresar
             </Button>
         </Link>

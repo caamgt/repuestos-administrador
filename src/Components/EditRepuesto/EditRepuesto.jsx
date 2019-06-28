@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Form, InputGroup, Col, Card, Modal, Alert } from 'react-bootstrap';
+import { Button, Form, InputGroup, Col, Card, Modal, Alert, Row } from 'react-bootstrap';
 import { ButtonBackToRepuestos } from '../ButtonBackToRepuestos/ButtonBackToRepuestos';
 import './EditRepuesto.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -147,7 +147,7 @@ export class EditRepuesto extends Component {
     render() {
         const {idMarca, idCategoria, nombre, dimensiones, nota, cantidad, precio, marca, categoria, marcas, categorias} = this.state;
         return(
-            <Col md={{ span: 6, offset: 2 }} className='pt-5 animated fadeIn'>
+            <Col xs={12} sm={12} md={8} lg={9} xl={10} className='pt-2 animated fadeIn'>
             <Card>
                 <Card.Body>
                     <Card.Title className='text-center'>Editar Repuesto</Card.Title>
@@ -215,39 +215,21 @@ export class EditRepuesto extends Component {
                                     </InputGroup>
                                 </Form.Group>
                             </Form.Row>
-
-                        {/* <Form.Row>
-                            <Col md={6}>
-                            {['checkbox'].map(type => (
-                                <div key={`custom-inline-${type}`} className="mb-3">
-                                    <Form.Check
-                                        custom
-                                        inline
-                                        label="Nuevo"
-                                        type={type}
-                                        id={`custom-inline-${type}-1`}
-                                    />
-                                    <Form.Check
-                                        custom
-                                        inline
-                                        label="Usado"
-                                        type={type}
-                                        id={`custom-inline-${type}-2`}
-                                    />
-                                </div>
-                            ))}
-                            </Col>
-                            <Col md={6}>
-                            </Col>
-                            
-                        </Form.Row> */}
-                        <ButtonBackToRepuestos className='editBtnSpacing'/>
-                        <Button onClick={() => this.onSubmitEdit()} variant="primary" type='submit' className='editBtnSpacing'>
-                            Guardar&nbsp; <FontAwesomeIcon icon={faSave}/>
-                        </Button>
-                        <Button onClick={this.handleShow} variant="primary" className='editBtnSpacing'>
-                            Cargar Imagenes&nbsp; <FontAwesomeIcon icon={faFileUpload}/>
-                        </Button>
+                            <Row>
+                                <Col xs={12} sm={4} md={6} lg={4} xl={4} className='editBtnSpacing'>
+                                    <ButtonBackToRepuestos/>
+                                </Col>
+                                <Col xs={12} sm={4} md={6} lg={4} xl={4}>
+                                    <Button onClick={() => this.onSubmitEdit()} variant="primary" type='submit' block  className='editBtnSpacing'>
+                                        Guardar&nbsp; <FontAwesomeIcon icon={faSave}/>
+                                    </Button>
+                                </Col>
+                                <Col xs={12} sm={4} md={6} lg={4} xl={4}>
+                                    <Button onClick={this.handleShow} variant="primary" className='editBtnSpacing' block>
+                                        Cargar Imagenes&nbsp; <FontAwesomeIcon icon={faFileUpload}/>
+                                    </Button>
+                                </Col>
+                            </Row>
                     </Form>
                 </Card.Body>
             </Card>

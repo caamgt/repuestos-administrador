@@ -89,7 +89,7 @@ export class SignIn extends Component {
             <div className='color-overlay'></div>
                 <div className='container-fluid animated fadeIn'>
                     <Row>
-                        <Col md={{ span: 4, offset: 4 }} className='text-center animated fadeIn'>
+                        <Col xs={12} sm={12} md={12} lg={12} xl={12}className='text-center animated fadeIn'>
                             <Card style={{ width: '22rem' }}>
                             <div className='signin-logo'>
                             <Logo />

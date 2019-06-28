@@ -71,10 +71,11 @@ export class VerRepuesto extends Component {
         const {id} = this.props.match.params
         const {nombre, cantidad, dimensiones, nota, precio, oferta, } = this.state.repuesto;
         return(
-            <Col md={{ span: 7, offset: 1 }} className='pt-5'>
+            <Col xs={12} sm={12} md={8}  lg={8} xl={{ span: 7, offset: 1 }} className='pt-4'>
                 <Card>
+                    <Card.Body>
                     <Row>
-                        <Col lg={6}>
+                        <Col xs={12} sm={6} md={6} lg={6} xl={6}>
                             <Card className='galeria-repuesto'>
                                 <Image onClick={this.handleShow} className='verRepuestoImg' src={this.state.showImg} rounded />
                                 <Card.Footer className='footerImg-container'>
@@ -90,7 +91,7 @@ export class VerRepuesto extends Component {
                                 </Card.Footer>
                             </Card>
                         </Col>
-                        <Col lg={6}>
+                        <Col xs={12} sm={6} md={6} lg={6} xl={6}>
                             
                             <Row>
                                 <Col lg={12}>
@@ -108,19 +109,24 @@ export class VerRepuesto extends Component {
                                         </ul>
                                     </ListGroup>
                                 </Col>
-                                <Col lg={12}>
-                                    <div className='btnContainer'>
+                                <Col xs={12} sm={12} md={12} lg={12} xl={12}>
+                                    <Row>
+                                        <Col xs={12} sm={6} md={12} lg={6} xl={6} className='btnContainer'>
                                         <Link to={'/listadorepuestos'}>
-                                            <Button variant="secondary"><FontAwesomeIcon icon={faArrowCircleLeft} />&nbsp;Regresar</Button>
+                                            <Button variant="secondary" block><FontAwesomeIcon icon={faArrowCircleLeft} />&nbsp;Regresar</Button>
                                         </Link>
+                                        </Col>
+                                        <Col xs={12} sm={6} md={12} lg={6} xl={6} className='btnContainer'>
                                         <Link to={`/repuesto/editar/${id}`}>
-                                            <Button><FontAwesomeIcon icon={faEdit} />&nbsp;Editar</Button>
+                                            <Button block><FontAwesomeIcon icon={faEdit}/>&nbsp;Editar</Button>
                                         </Link>
-                                    </div>
+                                        </Col>
+                                    </Row>
                                 </Col>
                             </Row>
                         </Col>
                     </Row>
+                    </Card.Body>
                 </Card>
     
                 <Modal show={this.state.show} onHide={this.handleClose} size='lg' centered>

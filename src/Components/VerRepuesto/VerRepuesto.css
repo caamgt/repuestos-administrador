@@ -55,9 +55,12 @@
 }
 
 .btnContainer {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
+    margin-top: 10px;
+}
+
+@media (min-width: 375px) and (min-width: 768px) {
+    .verRepuestoImg {
+        width: 250px;
+        height: auto;
+    }
 }
